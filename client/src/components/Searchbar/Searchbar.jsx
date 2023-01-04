@@ -1,5 +1,4 @@
-import '.../assets/Layout/searchbar.scss';
-
+import React from "react";
 
 export function SearchBar () {
     return (
