@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom"
+// Import of pictures
 import Hdmf from "../../assets/img/logo_hdmf.png"
 import Home from "../../assets/img/home.png"
 import Favorite from "../../assets/img/favorite.png"
