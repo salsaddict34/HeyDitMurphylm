@@ -1,11 +1,12 @@
-import '.../assets/Layout/footer.scss';
+import React from "react"
+import {Link} from "react-router-dom"
 
-export function Footer () {
+export default function Footer () {
     return (
         <div className="App-footer">
-        <a href='#'>Mentions Légales</a><br/>
-        <a href='#'>Contactez-nous !</a><br/>
-        <a href='#'>FAQ</a>
+        <Link to={'/'}>Mentions Légales</Link><br/>
+        <Link to={'/'}>Contactez-nous !</Link><br/>
+        <Link to={'/'}>FAQ</Link>
         </div>
     )
 }

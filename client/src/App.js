@@ -1,6 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
-import './App.css';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
@@ -9,12 +8,12 @@ import Login from "./pages/Login/Login";
 
 function App() {
 
-  const [items, setItems] = useState([]);
-  const [message, setMessage] = useState('')
+  //const [items, setItems] = useState([]);
+  //const [message, setMessage] = useState('')
 
   return (
     <BrowserRouter>
-      <Header message={message} setMessage={setMessage} />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth/register" element={<Register />} />
