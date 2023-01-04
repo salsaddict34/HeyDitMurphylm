@@ -16,17 +16,17 @@ const MoviePage = () => {
                         <div className="MovieRate"></div>
                     </div>
                 </div>
-                <div className="MovieTrailer">
-                    
-                </div>
+                <div className="MovieTrailer"></div>
             </section>
             <hr />
             <section className="CommentsContainer">
+                <h2>Commentaires</h2>
                 <div className="MovieUserCommentary">
-
                 </div>
                 <div className="MovieComments">
-
+                    <div className="UserPP"></div>
+                    <div className="UserName"></div>
+                    <div className="UserComment"></div>
                 </div>
             </section>
         </div>
