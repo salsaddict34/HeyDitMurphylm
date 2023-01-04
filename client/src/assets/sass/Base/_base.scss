@@ -1,17 +1,19 @@
-$body_color: #7d7d7d;
+//Import variables
+@use '../Utils/body_variables' as var;
+
+/*#############################################################*/
+/*#################### General statements ####################*/
+/*###########################################################*/
 
 body {
-    margin: 0;
-    background-color: $body_color;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
+  margin: 0;
+  background-color: var.$body_color;
+  font-family: var.$body_font_family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

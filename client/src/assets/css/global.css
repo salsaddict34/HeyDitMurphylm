@@ -1,7 +1,10 @@
+/*#############################################################*/
+/*#################### General statements ####################*/
+/*###########################################################*/
 body {
   margin: 0;
   background-color: #7d7d7d;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,6 +13,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+/*#############################################################*/
+/*########################## Header ##########################*/
+/*###########################################################*/
 .App-header {
   background-color: #e3b04b;
   display: flex;
@@ -33,7 +39,7 @@ nav {
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
 }
 
 li {
@@ -41,6 +47,9 @@ li {
   margin-right: 2em;
 }
 
+/*#############################################################*/
+/*########################## Footer ##########################*/
+/*###########################################################*/
 .App-footer {
   text-align: center;
   background-color: #e3b04b;
@@ -56,16 +65,4 @@ li {
 .footer--link {
   text-decoration: none;
   color: black;
-}
-
-.searchbar {
-  margin: 20px;
-  padding-left: 50px;
-  width: 15em;
-  height: 2em;
-  border-radius: 30px;
-  background-position: 4%;
-  background-repeat: no-repeat;
-  background-size: 1.8em;
-  border: none;
 }/*# sourceMappingURL=global.css.map */

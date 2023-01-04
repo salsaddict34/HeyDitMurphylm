@@ -1,3 +1,10 @@
+//Import variables
+@use '../Utils/footer_variables' as var;
+
+/*#############################################################*/
+/*########################## Footer ##########################*/
+/*###########################################################*/
+
 .App-footer {
     text-align: center;
     background-color: #e3b04b;
@@ -9,7 +16,7 @@
     padding-top: 1em;
     line-height: 2em;
   }
-
+  
   .footer--link {
     text-decoration: none;
     color: black;
