@@ -1,6 +1,10 @@
+/*#############################################################*/
+/*#################### General statements ####################*/
+/*###########################################################*/
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  background-color: #7d7d7d;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -9,11 +13,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+/*#############################################################*/
+/*########################## Header ##########################*/
+/*###########################################################*/
 .App-header {
   background-color: #e3b04b;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Roboto", sans-serif;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.54);
 }
@@ -30,6 +45,14 @@ nav {
   margin-left: auto;
 }
 
+ul {
+  display: inline;
+  list-style-type: none;
+}
+
+/*#############################################################*/
+/*########################## Footer ##########################*/
+/*###########################################################*/
 .App-footer {
   text-align: center;
   background-color: #e3b04b;

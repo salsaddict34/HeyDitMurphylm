@@ -1,8 +1,15 @@
+//Import variables
+@use '../Utils/footer_variables' as var;
+
+/*#############################################################*/
+/*########################## Footer ##########################*/
+/*###########################################################*/
+
 .App-footer {
-    text-align: center;
-    background-color: #e3b04b;
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:100px;
-  }
+  text-align: center;
+  background-color: var.$footer_bg_color;
+  position: absolute;
+  bottom: 0;
+  width: var.$footer_width;
+  height: var.$footer_height;
+}
