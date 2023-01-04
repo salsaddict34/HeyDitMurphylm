@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
+import Movie from "./pages/MoviePage/MoviePage";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />
+        <Route path="/MoviePage" element={<Movie />} />
       </Routes>
       <Footer/>
     </BrowserRouter >
