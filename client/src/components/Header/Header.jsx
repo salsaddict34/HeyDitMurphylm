@@ -11,18 +11,18 @@ import Sign_up from "../../assets/img/sign_up.png"
 
 export default function Header () {
     return (
-        <div className='App-header'>
+        <div className='header'>
+            <img className='header__logo' src={Hdmf} alt="Logo HeyDitMurphylm"/>
 
-            <img className='logo' src={Hdmf} alt="Logo HeyDitMurphylm" height={60}/>
             <h1>HeyDit<span>Murphy</span>lm</h1>
             <nav>
                 <ul>
-                    <li><Link to={'/'}><img src={Home} alt="Home" height={40}/></Link></li>
-                    <li><Link to={'/'}><img src={Favorite} alt="Favorite" height={40}/></Link></li>
-                    <li><Link to={'/'}><img src={Recommandation} alt="Recommandation" height={40}/></Link></li>
-                    <li><Link to={'/'}><img src={Chat} alt="Chat" height={40}/></Link></li>
-                    <li><Link to={'/'}><img src={Connect} alt="Connect" height={40}/></Link></li>
-                    <li><Link to={'/'}><img src={Sign_up} alt="Sign_up" height={40}/></Link></li>
+                    <li><Link to={'/'}><img src={Home} alt="Home"/></Link></li>
+                    <li><Link to={'/'}><img src={Favorite} alt="Favorite"/></Link></li>
+                    <li><Link to={'/'}><img src={Recommandation} alt="Recommandation"/></Link></li>
+                    <li><Link to={'/'}><img src={Chat} alt="Chat"/></Link></li>
+                    <li><Link to={'/'}><img src={Connect} alt="Connect"/></Link></li>
+                    <li><Link to={'/'}><img src={Sign_up} alt="Sign_up"/></Link></li>
                 </ul>
             </nav>
         </div>

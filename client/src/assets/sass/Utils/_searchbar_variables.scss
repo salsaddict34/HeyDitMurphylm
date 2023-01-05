@@ -7,16 +7,34 @@
 //}
 
 //########## Font variables ##########
-
+$searchbar--font_family: 'Roboto', sans-serif;
+$searchbar--font_size: 15px;
 
 //########## Shadow variables ##########
-
+$searchbar--shadow : drop-shadow(0px 4px 2px black);
 
 //########## Color variables ##########
 
 
+//########## Border variables ##########
+$searchbar--border_radius: 30px;
+
 //########## Height variables ##########
-$searchbar_height: 2.5em;
+$searchbar--height: 2.5em;
 
 //########## Width variables ##########
-$searchbar_width: 15em;
+$searchbar--width: 15em;
+
+//########## Margin variables ##########
+$searchbar--margin : 40px 50px;
+
+//########## Padding variables ##########
+$searchbar--padding: 50px;
+
+//########## Mixins ##########
+@mixin searchbar--bg {
+    background-image: url("../img/glass.png");
+    background-position: 4%;
+    background-repeat: no-repeat;
+    background-size: 1.8em;
+}

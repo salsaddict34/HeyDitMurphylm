@@ -9,11 +9,19 @@
 //########## Font variables ##########
 
 //########## Shadow variables ##########
+$footer--box_shadow: 0px -1px 1px black;
 
 //########## Color variables ##########
-$footer_bg_color: #e3b04b;
+$footer--bg_color: #e3b04b;
 
 //########## Height variables ##########
+$footer--height: 2em;
 
 //########## Width variables ##########
-$footer_width: 100%;
+$footer--width: 100%;
+
+//########## Margin variables ##########
+$footer__logo--margin: 20px;
+
+//########## Padding variables ##########
+$footer--padding_top: 1em;

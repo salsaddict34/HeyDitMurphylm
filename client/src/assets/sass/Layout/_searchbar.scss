@@ -6,14 +6,15 @@
 /*###########################################################*/
 
 .searchbar{
-    margin: 20px;
-    padding-left: 50px;
-    width: var.$searchbar_width;
-    height: var.$searchbar_height;
-    border-radius: 30px;
-    background-image: url("../img/glass.png");
-    background-position: 4%;
-    background-repeat: no-repeat;
-    background-size: 1.8em;
+    margin: var.$searchbar--margin;
+    width: var.$searchbar--width;
+    height: var.$searchbar--height;
+    border-radius: var.$searchbar--border_radius;
+    padding-left: var.$searchbar--padding;
     border: none;
+    filter: var.$searchbar--shadow;
+    font-family: var.$searchbar--font_family;
+    font-size: var.$searchbar--font_size;
+
+    @include var.searchbar--bg;
 }

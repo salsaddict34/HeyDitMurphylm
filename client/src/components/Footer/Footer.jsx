@@ -14,9 +14,9 @@ export default function Footer () {
                 <Link to={'/'} className='footer--link'>FAQ</Link>
             </div>
             <div>
-                <Link to={'/'}><img src={Facebook} alt="Facebook" height={30}/></Link>
-                <Link to={'/'}><img src={Instagram} alt="Instagram" height={30}/></Link>
-                <Link to={'/'}><img src={LinkedIn} alt="LinkedIn" height={30}/></Link>
+                <Link to={'/'} className="footer--logo"><img src={Facebook} alt="Facebook" height={30}/></Link>
+                <Link to={'/'} className="footer--logo"><img src={Instagram} alt="Instagram" height={30}/></Link>
+                <Link to={'/'} className="footer--logo"><img src={LinkedIn} alt="LinkedIn" height={30}/></Link>
             </div>
         </div>
     )

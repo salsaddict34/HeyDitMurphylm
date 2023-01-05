@@ -16,51 +16,58 @@ code {
 /*#############################################################*/
 /*########################## Header ##########################*/
 /*###########################################################*/
-.App-header {
+.header {
   background-color: #e3b04b;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.54);
+  text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.54);
   box-shadow: 0px 1px 1px black;
 }
 
-.logo {
+.header__logo {
   vertical-align: middle;
+  height: 80px;
+  filter: drop-shadow(4px 3px 2px rgba(0, 0, 0, 0.54));
 }
 
-span {
+h1 span {
   color: white;
 }
 
 nav {
   margin-left: auto;
 }
-
-ul {
+nav ul {
   list-style-type: none;
 }
-
-li {
+nav ul li {
   display: inline;
-  margin-right: 2em;
+  margin-right: 2.5em;
+}
+nav ul li img {
+  height: 50px;
+  filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.34));
 }
 
 /*#############################################################*/
 /*######################### Searchbar #########################*/
 /*###########################################################*/
 .searchbar {
-  margin: 20px;
-  padding-left: 50px;
+  margin: 40px 50px;
   width: 15em;
   height: 2.5em;
   border-radius: 30px;
+  padding-left: 50px;
+  border: none;
+  filter: drop-shadow(0px 4px 2px black);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
   background-image: url("../img/glass.png");
   background-position: 4%;
   background-repeat: no-repeat;
   background-size: 1.8em;
-  border: none;
 }
 
 /*#############################################################*/
@@ -68,8 +75,8 @@ li {
 /*###########################################################*/
 .App-footer {
   text-align: center;
-  background-color: #e3b04b;
   position: absolute;
+  background-color: #e3b04b;
   bottom: 0;
   width: 100%;
   box-shadow: 0px -1px 1px black;
@@ -80,4 +87,8 @@ li {
 .footer--link {
   text-decoration: none;
   color: black;
+}
+
+.footer--logo {
+  margin: 20px;
 }/*# sourceMappingURL=global.css.map */

@@ -7,16 +7,20 @@
 
 .App-footer {
     text-align: center;
-    background-color: var.$footer_bg_color;
     position:absolute;
+    background-color: var.$footer--bg_color;
     bottom:0;
-    width:var.$footer_width;
-    box-shadow: 0px -1px 1px black;
-    padding-top: 1em;
-    line-height: 2em;
+    width:var.$footer--width;
+    box-shadow: var.$footer--box_shadow;
+    padding-top: var.$footer--padding_top;
+    line-height: var.$footer--height;
   }
   
   .footer--link {
     text-decoration: none;
     color: black;
+  }
+
+  .footer--logo {
+    margin: var.$footer__logo--margin;
   }
