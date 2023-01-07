@@ -1,0 +1,28 @@
+//########## Custom Fonts ##########
+//@font-face {
+//    font-family: '';
+//    src: url('') format('');
+//    font-weight: normal;
+//    font-style: normal;
+//}
+
+//########## Shadow variables ##########
+$nav__logo--shadow: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.340));
+
+//########## Height variables ##########
+$nav__logos--height: 50px;
+
+//########## Margin variables ##########
+$nav__li--margin: 1.5em;
+
+//########## Breakpoints ##########
+$breakpoints : (
+    mobile: 900px
+);
+
+//########## Mixins ##########
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}

@@ -13,7 +13,6 @@ $header--font_family: 'Roboto', sans-serif;
 $header--text_shadow: 0px 3px 2px rgba(0, 0, 0, 0.540);
 $header--box_shadow: 0px 1px 1px black;
 $header__logo--shadow: drop-shadow(4px 3px 2px rgba(0, 0, 0, 0.540));
-$header__nav__logo--shadow: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.340));
 
 //########## Color variables ##########
 $header__bg--color: #e3b04b;
@@ -21,9 +20,19 @@ $header__span--color: white;
 
 //########## Height variables ##########
 $header__logo--height: 80px;
-$header__navbar__logos--height: 50px;
 
 //########## Width variables ##########
 
-//########## Margin variables ##########
-$header__nav__li--margin: 2.5em;
+
+//########## Breakpoints ##########
+$breakpoints : (
+    mobile: 320px
+);
+
+//########## Mixins ##########
+@mixin mobile-only {
+    @media screen and (min-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+

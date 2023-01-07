@@ -31,10 +31,21 @@ $searchbar--margin : 40px 50px;
 //########## Padding variables ##########
 $searchbar--padding: 50px;
 
+//########## Breakpoints ##########
+$breakpoints : (
+    mobile: 380px
+);
+
 //########## Mixins ##########
 @mixin searchbar--bg {
     background-image: url("../img/glass.png");
     background-position: 4%;
     background-repeat: no-repeat;
     background-size: 1.8em;
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
 }

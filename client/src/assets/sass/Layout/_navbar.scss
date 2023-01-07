@@ -1,0 +1,214 @@
+//Import variables
+@use '../Utils/navbar_variables' as var;
+
+/*#############################################################*/
+/*########################## Navbar ##########################*/
+/*###########################################################*/
+
+// nav {
+//     ul {
+//         list-style-type: none;
+//         display: flex;
+//         li {
+//             display: inline;
+//             margin-right: var.$nav__li--margin;
+//             img {
+//                 height: var.$nav__logos--height;
+//                 filter: var.$nav__logo--shadow;
+//             }
+//         }
+//     }
+
+//     @include var.mobile-only() {
+//         height: 60px;
+//         ul {
+//         }
+//         .dropdown-content
+//         {
+//             display: none;
+//             flex-direction: column;
+//             padding: 0;
+//             margin-top: 25px;    
+//             li {
+//                 border: 1px solid black;
+//                 width: 100%;
+//                 z-index: 1;
+//                 background: #e3b04b;
+//                 p {
+//                     color: black;
+//                     text-shadow: none;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center; 
+//                 }
+//             }
+//             img {
+//                 display: none;
+//             }
+//         }
+//         .last {
+//             border: 1px solid black;
+//             border-radius: 0px 0px 0px 50px;
+//         }
+//         label {
+//             display: flex;
+//             justify-content: flex-end;
+//             margin-right: 10px;
+
+//         }
+        
+//         #toggle:checked + .dropdown-content {
+//             display: flex;    
+//         }
+//     }
+// }
+
+
+// a {
+//     text-decoration-line: none;  
+// }
+
+// label, #toggle, p
+// {
+//     display: none;
+// }
+
+
+
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    list-style: none;
+}
+
+nav p {
+    font-size: 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    padding: 10px;
+    color: var(--navbar-color);
+    background: var(--navbar-bg-color);
+}
+
+.navbar__links {
+    display: flex;
+}
+
+.navbar__link {
+    padding: 0 10px;
+    transition: transform .2s;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__link > a {
+    text-decoration: none;
+    size: 30px;
+}
+
+.navbar__link > a > p {
+    color: var(--navbar-color);
+}
+
+.burger {
+    display: none;
+    transition: transform .2s;
+}
+
+//########### Mobile version #########//
+@media screen and (max-width:767.98px) {
+    .navbar__links {
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        height: 45vh;
+        position: absolute;
+        top: 65px;
+        right:-70px;
+        background-color: var(--navbar-bg-color);
+        text-shadow: none;
+        border: 1px solid black;
+        border-radius: 0px 0px 0px 40px;
+        z-index: 1;
+    }
+    
+    .open-nav .navbar__links {
+        width: 60%;
+        right: 0px;
+    }
+
+    .navbar__link > a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.6rem;
+    }
+    
+    .navbar__link {
+        border-top: 1px solid black;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    //############ Toggle menu ############//
+    .burger {
+        display: block;
+        position: relative;
+        padding: 0;
+        background-color: var(--navbar-bg-color);
+        border: none;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+    }
+}
+
+
+
+//############ Animations ############//
+.navbar__link:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+
+.burger:hover {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+
+//############## Modes ###############//
+.light-mode {
+    --navbar-color: black;
+    --navbar-bg-color: #e3b04b;
+}
+
+.dark-mode {
+    --navbar-color: #e3b04b;
+    --navbar-bg-color: black;
+}
+
+//############# Icons ###########//
+.white__icon {
+    color: white;
+    display: none;
+}
+.black__icon {
+    color: black;
+    display: none;
+}
+
+nav img {
+    height: 5em;
+    display: none;
+}

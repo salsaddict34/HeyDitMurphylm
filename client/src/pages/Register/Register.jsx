@@ -4,7 +4,7 @@ const Register = () => {
 
     return (
         <div className="home">
-        <p>Hello world we test our App!!</p>
+        <p>Hello world we test oursdfsf App!!</p>
         </div>
     )
 }
