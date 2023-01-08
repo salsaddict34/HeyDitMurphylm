@@ -5,97 +5,30 @@
 /*########################## Navbar ##########################*/
 /*###########################################################*/
 
-// nav {
-//     ul {
-//         list-style-type: none;
-//         display: flex;
-//         li {
-//             display: inline;
-//             margin-right: var.$nav__li--margin;
-//             img {
-//                 height: var.$nav__logos--height;
-//                 filter: var.$nav__logo--shadow;
-//             }
-//         }
-//     }
-
-//     @include var.mobile-only() {
-//         height: 60px;
-//         ul {
-//         }
-//         .dropdown-content
-//         {
-//             display: none;
-//             flex-direction: column;
-//             padding: 0;
-//             margin-top: 25px;    
-//             li {
-//                 border: 1px solid black;
-//                 width: 100%;
-//                 z-index: 1;
-//                 background: #e3b04b;
-//                 p {
-//                     color: black;
-//                     text-shadow: none;
-//                     display: flex;
-//                     justify-content: center;
-//                     align-items: center; 
-//                 }
-//             }
-//             img {
-//                 display: none;
-//             }
-//         }
-//         .last {
-//             border: 1px solid black;
-//             border-radius: 0px 0px 0px 50px;
-//         }
-//         label {
-//             display: flex;
-//             justify-content: flex-end;
-//             margin-right: 10px;
-
-//         }
-        
-//         #toggle:checked + .dropdown-content {
-//             display: flex;    
-//         }
-//     }
-// }
-
-
-// a {
-//     text-decoration-line: none;  
-// }
-
-// label, #toggle, p
-// {
-//     display: none;
-// }
-
-
 
 * {
     box-sizing: border-box;
     outline: none;
-    margin: 0;
-    padding: 0;
+    margin: var.$all__navbar--margin;
+    padding: var.$all__navbar--padding;
 }
+
 nav ul {
     list-style: none;
 }
 
+
 nav p {
-    font-size: 1rem;
+    font-size: var.$navbar__p--font-size;
+    display: none;
+    transition: var.$nav__p--transition-transform;
 }
 
 .navbar {
     display: flex;
-    align-items: center;
-    height: 65px;
-    padding: 10px;
-    color: var(--navbar-color);
-    background: var(--navbar-bg-color);
+    height: var.$navbar--height;
+    padding: var.$navbar--padding;
+    
 }
 
 .navbar__links {
@@ -103,56 +36,82 @@ nav p {
 }
 
 .navbar__link {
-    padding: 0 10px;
-    transition: transform .2s;
+    padding: var.$navbar__link--padding;
     display: flex;
     justify-content: center;
 }
 
 .navbar__link > a {
     text-decoration: none;
-    size: 30px;
+    size: var.$navbar__link__a--size;
 }
 
 .navbar__link > a > p {
-    color: var(--navbar-color);
+    color: var.$navbar__link__a__p--color;
 }
 
-.burger {
+.navbar__icon {
+    margin-right: var.$navbar__icon--margin-right;
+    transition: var.$navbar__icon--transition-transform;
+}
+
+.burger, .close {
     display: none;
-    transition: transform .2s;
+}
+
+//############# Icons ###########//
+.white__icon {
+    color: var.$white__icon--color;
+    filter: var.$white__icon_shadow;
+    margin-top: var.$icon__margin-top;
+}
+.black__icon {
+    color: var.$black__icon--color;
+    filter: var.$black__icon_shadow;
+    margin-top: var.$icon__margin-top;
+}
+nav img {
+    height: var.$nav__img_recommandation--height;
+}
+
+//############ Animations ############//
+nav p:hover, .navbar__icon:hover {
+    -ms-transform: var.$p__icon--hover--ms-transform;
+    -webkit-transform: var.$p__icon--hover--webkit-transform;
+    transform: var.$p__icon--hover--transform; 
 }
 
 //########### Mobile version #########//
-@media screen and (max-width:767.98px) {
+@media screen and (max-width:799px) {
     .navbar__links {
         display: flex;
         flex-direction: column;
-        width: 0;
-        height: 45vh;
-        position: absolute;
-        top: 65px;
-        right:-70px;
-        background-color: var(--navbar-bg-color);
+        position: fixed;
+        top: var.$navbar__links__mobile--top;
+        bottom: var.$navbar__links__mobile--bottom;
+        width: var.$navbar__links__mobile--width;
+        height: var.$navbar__links__mobile--height;
+        right:var.$navbar__links__mobile--right;
+        visibility: hidden;
         text-shadow: none;
-        border: 1px solid black;
-        border-radius: 0px 0px 0px 40px;
-        z-index: 1;
+        border: var.$navbar__links__mobile--border;
+        border-radius: var.$navbar__links__mobile--border-radius;
+        z-index: var.$navbar__links__mobile--z-index;
+        transition: var.$navbar__links__mobile--transition;
+        background-color: var.$navbar__links--bg-color;
     }
     
-    .open-nav .navbar__links {
-        width: 60%;
-        right: 0px;
+    nav p {
+        display: flex;
     }
-
+    
     .navbar__link > a {
         display: block;
-        padding: 1rem;
-        font-size: 1.6rem;
+        padding: var.$navbar__link__a--padding;
     }
     
     .navbar__link {
-        border-top: 1px solid black;
+        border-top: var.$navbar__link__mobile--border-top;
         font-weight: bold;
         text-transform: uppercase;
     }
@@ -161,54 +120,40 @@ nav p {
     .burger {
         display: block;
         position: relative;
-        padding: 0;
-        background-color: var(--navbar-bg-color);
+        padding: var.$burger__mobile--padding;
+        background-color:var.$burger__mobile--bg-color;
         border: none;
         cursor: pointer;
     }
+    .show-nav .navbar__links {
+        width: var.$show-nav__navbar__links__mobile--width;
+        right: var.$show-nav__navbar__links__mobile--right;
+        visibility: visible;
+    }
+    .show-nav .burger__icon, .navbar__icon {
+        display: none;
+    }
 
-    .bar {
+    .show-nav .close, .burger__icon {
         display: block;
+    }
+
+    .close {
+        background-color: var.$close__mobile--bg-color;
+        border: none;
+        display: none;
+        cursor: pointer;
     }
 }
 
 
-
-//############ Animations ############//
-.navbar__link:hover {
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); 
-}
-
-.burger:hover {
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2); 
-}
-
 //############## Modes ###############//
-.light-mode {
-    --navbar-color: black;
-    --navbar-bg-color: #e3b04b;
-}
+// .light-mode {
+//     --navbar-color: black;
+//     --navbar-bg-color: #e3b04b;
+// }
 
-.dark-mode {
-    --navbar-color: #e3b04b;
-    --navbar-bg-color: black;
-}
-
-//############# Icons ###########//
-.white__icon {
-    color: white;
-    display: none;
-}
-.black__icon {
-    color: black;
-    display: none;
-}
-
-nav img {
-    height: 5em;
-    display: none;
-}
+// .dark-mode {
+//     --navbar-color: #e3b04b;
+//     --navbar-bg-color: black;
+// }

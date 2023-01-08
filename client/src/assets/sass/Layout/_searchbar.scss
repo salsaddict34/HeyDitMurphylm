@@ -17,7 +17,7 @@
     font-size: var.$searchbar--font_size;
     @include var.searchbar--bg;
     @include var.mobile-only {
-        margin: 6%;        
+        margin: 6%;    
     }
 
 }

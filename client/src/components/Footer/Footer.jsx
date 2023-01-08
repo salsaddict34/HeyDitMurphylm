@@ -7,7 +7,7 @@ import LinkedIn from "../../assets/img/linkedin.png"
 
 export default function Footer () {
     return (
-        <div className="App-footer">
+        <div className="footer">
             <div>
                 <Link to={'/'} className='footer--link'>Mentions Légales</Link><br/>
                 <Link to={'/'} className='footer--link'>Contactez-nous !</Link><br/>

@@ -23,7 +23,7 @@ $searchbar--border_radius: 30px;
 $searchbar--height: 2.5em;
 
 //########## Width variables ##########
-$searchbar--width: 15em;
+$searchbar--width: 18em;
 
 //########## Margin variables ##########
 $searchbar--margin : 40px 50px;
@@ -33,7 +33,7 @@ $searchbar--padding: 50px;
 
 //########## Breakpoints ##########
 $breakpoints : (
-    mobile: 380px
+    mobile: 767px
 );
 
 //########## Mixins ##########
